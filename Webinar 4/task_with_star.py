@@ -14,11 +14,16 @@
 def max_division_by_3(num):
     new_num = num
     tmp = 0
-    for i in range(len(str(num))).__reversed__():
-        for j in range(int(str(num)[i]), 10):
+    find = False
+    for i in range(len(str(num))):
+        for j in range(9, int(str(num)[i]), -1):
             tmp = int(str(num)[0:i] + str(j) + str(num)[i+1:])
-            if tmp % 3 == 0 and tmp > new_num:
+            if tmp % 3 == 0:
                 new_num = tmp
+                find = True
+                break
+        if find:
+            break
     return new_num
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

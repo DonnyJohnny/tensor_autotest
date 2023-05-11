@@ -4,13 +4,8 @@
 # (1, 2, 3, 4, 5, 6, 7, 8, 9, 0)  => "(123) 456-7890"
 
 def create_phone_number(num_tuple):
-    str_phone = "("
-    for i in range(len(num_tuple)):
-        str_phone += str(num_tuple[i])
-        if i == 2:
-            str_phone += ") "
-        if i == 5:
-            str_phone += "-"
+    lst = "".join([str(i) for i in num_tuple])
+    str_phone = "({}) {}-{}".format(lst[:3], lst[3:6], lst[6:])
     return str_phone
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

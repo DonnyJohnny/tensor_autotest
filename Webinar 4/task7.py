@@ -3,7 +3,7 @@
 # [1, 0, 1, 2, 0, 1, 3]  => [1, 1, 2, 1, 3, 0, 0]
 
 def move_zeros(lst):
-    for i in range(len(lst)).__reversed__():
+    for i in range(len(lst) - 1, 0, -1):
         if lst[i] == 0:
             del lst[i]
             lst.append(0)
