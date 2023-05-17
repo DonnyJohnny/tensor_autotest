@@ -7,6 +7,12 @@
 
 
 def letter_stat(our_str):
+    """
+    Возвращает словарь, где в качестве ключей - буквы строки,
+    а значения - кол-во вхождений буквы в строку
+    :param our_str: строка для подсчета букв
+    :return: словарь со статистикой букв
+    """
     letters_dict = {}
     for letter in our_str:
         if letter not in letters_dict:

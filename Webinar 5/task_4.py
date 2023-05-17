@@ -14,6 +14,11 @@
 
 
 def scrabble(word):
+    """
+    Подсчитывает кол-во очков за слово
+    :param word: слово, для подсчета очков
+    :return: кол-во очков
+    """
     letters = {}
     letters.update(dict.fromkeys(["а", "в", "е", "ё", "и", "н", "о", "р", "с", "т"], 1))
     letters.update(dict.fromkeys(["д", "к", "л", "м", "п", "у"], 2))
