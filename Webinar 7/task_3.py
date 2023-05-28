@@ -75,7 +75,7 @@ class Bus(PublicTransport):
     @property
     def park(self):
         """
-        Возвразает парк приписки автобуса
+        Возвращает парк приписки автобуса
         :return: парк
         """
         return self.__park
@@ -84,8 +84,7 @@ class Bus(PublicTransport):
     def park(self, park):
         """
         Записывает парк приписки автобуса, в диапазоне от 1000 до 9999
-        :param park:
-        :return:
+        :param park: парк приписки
         """
         assert (park >= 1000) and (park <= 9999)
         self.__park = park
