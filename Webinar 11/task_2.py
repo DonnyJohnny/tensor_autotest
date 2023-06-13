@@ -22,7 +22,7 @@ message = "Привет"
 try:
     browser.get("https://fix-online.sbis.ru/")
     browser.maximize_window()
-    sleep(1)
+    sleep(3)
     login = WebDriverWait(browser, 5).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, '[name="Login"]'))
     )

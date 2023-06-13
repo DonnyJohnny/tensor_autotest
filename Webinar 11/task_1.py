@@ -11,12 +11,15 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
 
 browser = webdriver.Chrome()
-login = ""
 
 try:
     browser.get("https://sbis.ru/")
+    browser.maximize_window()
+    sleep(3)
+
     contact = WebDriverWait(browser, 5).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, ".sbisru-Header__menu-link[href='/contacts']"))
     )
@@ -40,6 +43,8 @@ try:
     browser.execute_script("arguments[0].scrollIntoView();", link)
 
     link.click()
+
+    sleep(2)
 
     assert browser.current_url == "https://tensor.ru/about", "Отрыта неверная ссылка"
 finally:
